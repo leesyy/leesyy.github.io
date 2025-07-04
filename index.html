@@ -94,7 +94,7 @@ a.author {
                     <div class="resume-item">
                         <h4>Software Engineer Intern, AIRS Company, Hyundai Motor Group</h4>
                         <h5>Sep. 2021 - Feb. 2022</h5>
-                        <p>Advisor: Yushin Lim</p>
+                        <!-- <p>Advisor: Yushin Lim</p> -->
                     </div>
 
                     <h3 class="resume-title">Education</h3>
@@ -136,7 +136,7 @@ a.author {
 
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h4 class="card-title mb-0">2025</h4>
+                            <h4 class="card-title mb-0">2024</h4>
                         </div>
                         <!-- Publication Item -->
                         <div class="card-body border-bottom">
@@ -151,10 +151,12 @@ a.author {
                                 <!-- Paper info -->
                                 <div class="col-md-9">
                                     <b>Seeing Through the Conversation: Audio-Visual Speech Separation based on Diffusion Model</b><br>
-                                    S. Lee<sup>*</sup>, C. Jung<sup>*</sup>, Y. Jang, J. Kim, and J. S. Chung<br>
+                                    S. Lee<sup>*</sup>, C. Jung<sup>*</sup>, Y. Jang, J. H. Kim, and J. S. Chung<br>
                                     ICASSP<br>
                                     <a href="https://arxiv.org/abs/2310.19581" class="btn btn-outline-primary btn-sm mt-2">Paper</a>
                                     <a href="https://mm.kaist.ac.kr/projects/avdiffuss/" class="btn btn-outline-primary btn-sm mt-2">Project Page</a>
+                                    <a href="https://github.com/kaistmm/AVDiffuSS" class="btn btn-outline-primary btn-sm mt-2">Paper</a>
+                                    <a href="" class="btn btn-outline-primary btn-sm mt-2">Code</a>
                                 </div>
                             </div>
                         </div>
@@ -175,6 +177,8 @@ a.author {
                                     ICASSP<br>
                                     <a href="https://arxiv.org/abs/2309.12306" class="btn btn-outline-primary btn-sm mt-2">Paper</a>
                                     <a href="" class="btn btn-outline-primary btn-sm mt-2">Project Page</a>
+                                    <a href="https://github.com/kaistmm/TalkNCE" class="btn btn-outline-primary btn-sm mt-2">Paper</a>
+                                    <a href="" class="btn btn-outline-primary btn-sm mt-2">Code</a>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +196,7 @@ a.author {
                     <hr>
                     <h2>Contact</h2>
                     <div class="text-left" style="font-size: 14px; margin-bottom:2pt">
-                        <i class="bi bi-envelope"></i> &ensp; jyj (at) kaist.ac.kr
+                        <i class="bi bi-envelope"></i> &ensp; syun (at) mmai (dot) io
                     </div>
                     <div class="text-left" style="font-size: 14px; margin-bottom:2pt">
                         <i class="bi bi-geo-alt"></i> &ensp; Room 3103, N24 (LG Innovation Hall)
@@ -222,11 +226,12 @@ a.author {
 document.addEventListener("DOMContentLoaded", function () {
     // 1) Authors 링크 자동화
     const authors = {
-        "J. Kim": "https://sites.google.com/view/jhoonkim/",
+        "J. H. Kim": "https://sites.google.com/view/jhoonkim/",
         "J. S. Chung": "https://mm.kaist.ac.kr/joon/",
         "Y. Jang": "https://art-jang.github.io",
         "C. Jung": "https://cyongong.github.io/",
         "K. Nam": "https://devkihyun.github.io/about/",
+        "S. Lee": "https://leesyy.github.io"
     };
 
     const pubDivs = document.querySelectorAll("#pubs .card-body");
@@ -235,9 +240,9 @@ document.addEventListener("DOMContentLoaded", function () {
         for (const [name, link] of Object.entries(authors)) {
             const safeName = name.replace(/\./g, "\\.");
             const regex = new RegExp(`\\b${safeName}\\b`, "g");
-
+            // 이름 볼드
             let displayHTML;
-            if (name === "Y. Jang") {
+            if (name === "S. Lee") {
                 displayHTML = `<a class="author" href="${link}" target="_blank"><strong>${name}</strong></a>`;
             } else {
                 displayHTML = `<a class="author" href="${link}" target="_blank">${name}</a>`;
