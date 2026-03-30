@@ -153,17 +153,15 @@ body.dark-mode * {
 }
 
 .pub-thumbnail-image {
-    width: 100%;          /* 부모 div 너비 100% */
-    max-width: 320px;     /* 최대 너비 제한 */
-    aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+    width: 100%;
+    max-width: 320px;
     border: 2px dashed #ccc;
     border-radius: 0.5rem;
-    overflow: hidden;     /* 이미지가 넘치면 숨김 */
+    overflow: hidden;
 }
 
 .pub-thumbnail-image img {
-    width: 100%;   /* 부모 너비에 맞춤 */
-    height: auto;  /* 비율 유지 */
-    display: block; /* 아래 여백 제거 */
-    object-fit: contain; /* 이미지 비율 유지하며 박스 내에 맞춤 */
+    width: 100%;
+    height: auto;
+    display: block;
 }
