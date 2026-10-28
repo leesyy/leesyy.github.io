@@ -1,3 +1,42 @@
+:root {
+  --bs-font-sans-serif: "IBM Plex Sans KR", sans-serif;
+  --bs-body-font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+body {
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.profile-photo {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.profile-info {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-info {
+    margin-top: 10pt;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-photo {
+    width: 190px;
+    height: 190px;
+  }
+}
+
 a.author-bold-underline {
   text-decoration: underline;
   font-weight: bold;
@@ -164,4 +203,51 @@ body.dark-mode * {
     width: 100%;
     height: auto;
     display: block;
+}
+
+#pubs {
+    scroll-margin-top: 72px;
+}
+
+.pub-filter .btn {
+    color: #212529;
+    background-color: transparent;
+    border: 1px solid #212529;
+}
+
+.pub-filter .btn:hover,
+.pub-filter .btn:focus {
+    color: #212529;
+    background-color: #f2f2f2;
+    border-color: #212529;
+}
+
+.pub-filter .btn.active,
+.pub-filter .btn.active:hover,
+.pub-filter .btn.active:focus {
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+    box-shadow: none;
+}
+
+body.dark-mode .pub-filter .btn {
+    color: #e0e0e0;
+    background-color: transparent;
+    border-color: #888;
+}
+
+body.dark-mode .pub-filter .btn:hover,
+body.dark-mode .pub-filter .btn:focus {
+    color: #fff;
+    background-color: #2a2a2a;
+    border-color: #888;
+}
+
+body.dark-mode .pub-filter .btn.active,
+body.dark-mode .pub-filter .btn.active:hover,
+body.dark-mode .pub-filter .btn.active:focus {
+    color: #121212;
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
 }
